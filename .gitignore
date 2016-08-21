@@ -2,5 +2,6 @@
 *.py[cod]
 .cache/
 .dev/
+.prod/
 .tox/
 __pycache__/

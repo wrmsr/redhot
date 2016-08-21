@@ -1,9 +1,10 @@
-.PHONY: all clean .dev
+.PHONY: all clean .dev .prod
 
 all: test flake8 pre-commit
 
 clean:
 	rm -rf .dev
+	rm -rf .prod
 	rm -rf .tox
 	rm -rf *.egg-info
 	find redhot tests -name '*.pyc' -delete -or -name '*.pyo' -delete -or -name '__pycache__' -delete
@@ -19,4 +20,8 @@ pre-commit:
 
 .dev:
 	virtualenv .dev
-	bash -c 'source .dev/bin/activate && pip install -r requirements-dev.txt'
+	.dev/bin/pip install -r requirements-dev.txt
+
+.prod:
+	virtualenv .prod
+	.prod/bin/pip install -r requirements.txt
