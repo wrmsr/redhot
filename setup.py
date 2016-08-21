@@ -56,6 +56,7 @@ setuptools.setup(
     install_requires=[
         'PyYAML',
         'flask',
+        'requests',
     ],
 
     extra_requires={

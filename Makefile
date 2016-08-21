@@ -1,5 +1,6 @@
-all: clean test flake8 pre-commit
-.PHONY: all dev
+.PHONY: all clean .dev
+
+all: test flake8 pre-commit
 
 clean:
 	rm -rf .dev

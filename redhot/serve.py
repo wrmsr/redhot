@@ -17,6 +17,7 @@ app = Flask(__name__)
 #     --data-urlencode 'order=desc' \
 #     --data-urlencode 'q=language:java' \
 #     --data-urlencode 'q=created:>`date -v-7d '+%Y-%m-%d'`'
+# curl -G -H 'User-Agent: wrmsr-redhot' 'https://api.github.com/search/repositories?q=language:java' | jq .
 
 
 @app.route('/', methods=['GET'])
