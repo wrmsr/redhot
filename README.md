@@ -1,1 +1,1 @@
-Python utilities.
+Python service skeleton.
